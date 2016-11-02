@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/why' => 'message#why', as: :why
   post 'messages' => 'message#addwhy'
   get '/whynot' => 'message#whynot', as: :whynot
+  get '/results' => 'message#results', as: :results
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
