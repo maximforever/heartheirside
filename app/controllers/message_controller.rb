@@ -25,9 +25,9 @@ class MessageController < ApplicationController
 		if @message.save
 			if message_params[:complete] == "true"
 				redirect_to results_path
-				flash[:success] = "Thank you for participating!"
+				flash[:success] = "Thank you for speaking up and sharing your views!"
 			else
-				redirect_to whynot_path(party: @message.party)
+				redirect_to whynot_path(party: !@message.party)
 			end
 
 		else
@@ -39,9 +39,9 @@ class MessageController < ApplicationController
 		@message = Message.new
 
 		if params[:party] == "true"
-			@candidate = "Hillary Clinton" 
+			@candidate = "Donald Trump" 
 		elsif params[:party] == "false"
-			@candidate = "Donald Trump"
+			@candidate = "Hillary Clinton"
 		else
 			redirect_to whynot_path
 		end
