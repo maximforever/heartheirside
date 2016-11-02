@@ -1,0 +1,14 @@
+<h1>I'm voting for <span id = "candidate"><%= @candidate %></span> because: </h1>
+
+<%= form_for (@message) do |m| %>
+
+	<%= m.text_area :body, rows: 2, maxlength: 200, size: 250 %>
+	<%= m.hidden_field :party, :value => params[:party] %>
+	<%= m.hidden_field :positive, value: true %>
+	<%= m.hidden_field :complete, value: false %>
+
+	<br>
+
+	<%= m.submit 'Submit' %> 
+
+<% end %>
