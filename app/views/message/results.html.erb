@@ -5,38 +5,19 @@
 	<div class = "row results">
 
 		<div class = "col-md-6 col-xs-12  ">
-			<h1 class = "hill">HILLARY CLINTON</h1>
-			<h3>The good:</h3>
-				<ul>
-					<% @hill_good.each do |h| %>
-						<li><%= h.body %></li>
-					<% end %>
-				</ul>
-
-			<h3>The bad:</h3>
-				<ul>
-					<% @hill_bad.each do |h| %>
-						<li><%= h.body %></li>
-					<% end %>
-				</ul>
-
+			<div class = "candidate">
+				<div class = "message-area good" id = "hill-good"></div>
+				<h1 class = "can-name hill">Hillary Clinton</h1>
+				<div class = "message-area bad" id = "hill-bad"></div>
+			</div>
 		</div>
 
 		<div class = "col-md-6 col-sm-6 col-xs-12">
-			<h1 class = "don">DONALD TRUMP</h1>
-			<h3>The good:</h3>
-				<ul>
-					<% @don_good.each do |d| %>
-						<li><%= d.body %></li>
-					<% end %>
-				</ul>
-
-			<h3>The bad:</h3>
-				<ul>
-					<% @don_bad.each do |d| %>
-						<li><%= d.body %></li>
-					<% end %>
-				</ul>
+			<div class = "candidate">
+				<div class = "message-area good" id = "don-good"></div>
+				<h1 class = "can-name don">Donald Trump</h1>
+				<div class = "message-area bad" id = "don-bad"></div>
+			</div>
 		</div>
 
 

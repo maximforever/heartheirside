@@ -1,4 +1,6 @@
-<h1>I'm not voting for <span id = "candidate"><%= @candidate %></span> because: </h1>
+<p> Session complete: <%= session[:complete] %></p>
+
+<h1>I'm not voting for <span id = "candidate" class = "can-name"><%= @candidate %></span> because: </h1>
 
 
 <%= form_for (@message) do |m| %>

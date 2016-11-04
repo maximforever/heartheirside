@@ -14,6 +14,13 @@
  *= require_self
  */
 
+@keyframes fade { 
+  0%         { opacity:0; }
+  20%        { opacity:1; }
+  80%         { opacity:1; }
+  100%        { opacity:0; }
+}
+
 .republican, .democrat {
 	font-size: 18px;
 }
@@ -37,10 +44,48 @@
  }
 
 .hill{
-	color: blue;
+	color: #0032d8;
 }
 
 
 .don {
-	color: red;
+	color: #d21400 ;
+}
+
+.candidate {
+    text-align: center;
+    font-size: 3em;
+}
+
+
+.can-name {
+    font-family: 'Amethysta', serif;
+    display: inline-block;
+    padding: 5px;
+    background: rgba(10, 10, 10, 0.4);
+
+}
+
+.message-area {
+    text-align: left;
+    height:30vh;
+/*    border: 1px solid black;*/
+    font-size: 0.5em;
+}
+
+.message-area p{
+/*    border: 1px solid black;*/
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    animation: fade 3s infinite;
+}
+
+.good{
+    color: #009900;
+}
+
+.bad{
+    color: #220235;
 }
