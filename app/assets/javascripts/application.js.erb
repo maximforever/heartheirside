@@ -22,6 +22,7 @@ function main(){
 
     var logo = "";
     var party = "";
+    var stat;
 
     console.log("let's go!");
 
@@ -72,7 +73,17 @@ function main(){
     });
 
 
+    $(".toggle").click(function(){
+
+        if($(".explanation").hasClass("hidden")){
+            $(".explanation").removeClass("hidden");
+        } else {
+            $(".explanation").addClass("hidden");
+        }
+            
+    });
 }
+
 
 
 function donGood() {
