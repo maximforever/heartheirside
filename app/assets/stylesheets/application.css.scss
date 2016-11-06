@@ -74,7 +74,7 @@ body {
 }
 
 .message-area p{
-    max-width: 200px;
+    max-width: 20vw;
     display: inline-block;
     position: relative;
     left: 0px;
@@ -230,6 +230,13 @@ body {
     margin-right: auto;
     margin-left: auto;
     text-align: center; 
+}
+
+.credits{
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    font-size: 2vh;
 }
 
 @media handheld, screen and (max-width: 720px){
