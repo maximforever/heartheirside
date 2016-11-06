@@ -45,6 +45,7 @@ class MessageController < ApplicationController
 				puts "upping to 2"
 				session[:complete] = 2
 				redirect_to results_path
+				flash[:success] = "Thank you for speaking up and sharing your views"
 			else
 				flash[:success] = "Something went wrong here."
 				redirect_to root_path
@@ -86,7 +87,7 @@ class MessageController < ApplicationController
 	def results
 
 
-		# redirect_to root_path if session[:complete] != 2
+		redirect_to root_path if session[:complete] != 2
 
 		session[:complete] == 0
 
