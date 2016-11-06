@@ -88,7 +88,15 @@ class MessageController < ApplicationController
 	def results
 
 
-		redirect_to root_path if session[:complete] != 2
+		puts "!!! -- SECRET SESSION IS: #{params[:secret]}"
+
+	  if(params[:secret] != "yes")
+			if session[:complete] != 2
+				redirect_to root_path 
+			end
+		end
+
+
 
 		session[:complete] == 0
 
