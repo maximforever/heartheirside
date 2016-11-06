@@ -90,12 +90,12 @@ class MessageController < ApplicationController
 
 		puts "!!! -- SECRET SESSION IS: #{params[:secret]}"
 
-	  if(params[:secret] != "yes")
+=begin	  if(params[:secret] != "yes")
 			if session[:complete] != 2
 				redirect_to root_path 
 			end
 		end
-
+=end
 
 
 		session[:complete] == 0

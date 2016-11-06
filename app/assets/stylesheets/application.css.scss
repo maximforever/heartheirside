@@ -271,6 +271,11 @@ body {
     display: none;
 }
 
+.skip{
+    margin-top: 10px;
+    font-size: 0.6em;
+}
+
 @media handheld, screen and (max-width: 720px){
     .candidate-button{
         width: 85vw;
