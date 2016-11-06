@@ -69,9 +69,9 @@ class MessageController < ApplicationController
 		if session[:complete] != 1
 			session[:complete] = 0
 			redirect_to root_path
-		elsif params[:party] == "true"
-			@candidate = "Donald Trump" 
 		elsif params[:party] == "false"
+			@candidate = "Donald Trump" 
+		elsif params[:party] == "true"
 			@candidate = "Hillary Clinton"
 		else
 			redirect_to whynot_path

@@ -21,21 +21,56 @@ $(document).ready(main);
 
 function main(){
 
+    var logo = "";
+    var party = "";
+
+    console.log("let's go!");
+
+    var width = $('.message-area').width();
+    $(".message-area p").css("max-width", width/2 + "px");
+
+
+
+
+
     var run = setTimeout(function(){
         setInterval(function(){donGood()}, 3000);
-    }, randBetween(300, 1200));
+    }, randBetween(0, 1500));
 
     var run = setTimeout(function(){
         setInterval(function(){donBad()}, 3000);
-    }, randBetween(300, 1200));
+    }, randBetween(0, 1500));
 
     var run = setTimeout(function(){
         setInterval(function(){hillGood()}, 3000);
-    }, randBetween(300, 1200));
+    }, randBetween(0, 1500));
 
     var run = setTimeout(function(){
         setInterval(function(){hillBad()}, 3000);
-    }, randBetween(300, 1200));
+    }, randBetween(0, 1500));
+
+
+
+    $(".message-body").keyup(function() {
+        var chars = $(this).val().length;
+        if(chars >= 200){
+            $(".char-count").css("color", "red");
+        } else {
+            $(".char-count").css("color", "black");
+        }
+        $("#counter").text(chars);
+    });
+
+
+    $(".candidate-button").hover(
+        function() {
+            party = $(this).find(".party-logo").attr( "src")
+           $(this).find(".party-logo").attr( "src" , "<%= image_path 'check.png' %>" );
+
+        }, function() {
+            $(this).find(".party-logo").attr( "src" , party );
+
+    });
 
 
 }
@@ -130,6 +165,29 @@ function hillBad() {
 
 }
 
+
+
+
+
+
+/* HOVER FUNCTION */
+
+/*NOT WORKING*/
+
+
+
+
+
+
+
+
+$("h1").click(function(){
+    console.log("HAY!");
+});
+
+
+
 function randBetween(min, max){
     return Math.floor(Math.random() * (max - min) + min);
 }
+

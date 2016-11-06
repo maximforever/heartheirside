@@ -1,0 +1,231 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@keyframes fade { 
+  0%         { opacity:0; }
+  20%        { opacity:1; }
+  80%         { opacity:1; }
+  100%        { opacity:0; }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.republican, .democrat {
+	font-size: 18px;
+}
+
+ .alert {
+    color: black;
+    padding: 10px;
+    margin-top: 3%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    max-width: 30%;
+    border: 1px solid black;
+    border-radius: 0px;
+    &.alert-error{
+        background: #FF665A;
+    }
+    &.alert-success{
+        background: #64C83F;   
+    }
+ }
+
+
+.candidate {
+    text-align: center;
+    font-size: 3em;
+}
+
+
+.can-name {
+    color: white;
+    font-family: 'Amethysta', serif;
+    display: inline-block;
+    padding: 10px;
+    background: rgba(10, 10, 10, 0.4);
+
+}
+
+.message-area {
+    text-align: left;
+    height:35vh;
+/*    border: 1px solid black;*/
+    font-size: 0.5em;
+}
+
+.message-area p{
+    max-width: 200px;
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    animation: fade 3s infinite;
+}
+
+.good{
+    color: #009900;
+}
+
+.bad{
+    color: #692591;
+}
+
+.candidate-options{
+    text-align: center;
+}
+
+.half-screen {
+    text-align: center;
+}
+
+.candidate-button{
+    margin-right: auto;
+    margin-left: auto; 
+    width: 30vw;
+    height: 30vw;
+    text-align: center;
+}
+
+.white-banner{
+    z-index: 2;
+    background: white;
+    position: relative;
+    top: 10vw;
+    height: 10vw;
+    width: 18vw;
+    margin-right: auto;
+    margin-left: auto; 
+}
+
+
+.candidate-button p {
+    vertical-align: center;
+    display: block;
+    position: relative;
+    top: 20%;
+    font-size: 3vw;
+    font-family: 'Amethysta', serif;
+    color: white;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.party-logo{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 6%;
+    height: 9vw;
+    width: 9vw;
+    z-index: 3;
+}
+
+.trump {
+    background: #BC0000;
+    &:hover { 
+        background: #EA0C0C;
+    }
+}
+
+.clinton {
+    background: #0057B8;
+    &:hover {
+        background: #1280FB;
+    }
+}
+
+
+.instructions{
+    text-align: center;
+    font-size: 4vw;
+    margin-top: 3%;
+    margin-bottom: 6%;
+
+}
+
+.footer {
+    margin-top: 2vw;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.footer a{
+    color: #051466;
+    &:hover {
+        text-decoration: none;
+        color: #4157CA;
+    }
+}
+
+.char-count {
+    text-align: left;
+}
+
+
+.input-form{
+    text-align: center;
+}
+
+.message-body{
+    height: 30vh;
+    width: 70vw;
+    resize: none;
+    font-size: 2.5vw;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.don{
+    background: #d21400;
+}
+
+
+.hill{
+    background: #0032d8;
+}
+
+
+
+.sub-button {
+
+    background: #83F459;
+    font-size: 23px;
+    padding: 22px  35px 22px 35px;
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: black;
+    &:hover {
+        background: #289400;
+    }
+}
+
+
+@media (max-width: 768) {
+    .candidate-button{
+        width: 85vw;
+        height: 30vw;
+    }
+
+}

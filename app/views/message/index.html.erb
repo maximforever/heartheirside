@@ -1,13 +1,49 @@
-<p> Session complete: <%= session[:complete] %></p>
+<h1 class = "instructions">I'm voting for:</h1>
 
-<h1>I'm voting for:</h1>
+<div class = "container">
+    <div class = "row candidate-options">
 
+    <%= link_to why_path(party: false) do %> 
+            <div class = "col-md-6 col-sm-6 col-xs-12">
+                <div class = "candidate-button clinton">
+                    <p>Hillary Clinton</p>
+                    <div class = "white-banner"> 
+                      <!--   <div class = "party-logo" id = "dem-logo"></div> -->
+
+
+                        <%= image_tag "dem.png", class: 'party-logo' %>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        <% end %>
+
+        <%= link_to why_path(party: true) do %> 
+            <div class = "col-md-6 col-sm-6 col-xs-12">
+                <div class = "candidate-button trump">
+                    <p>Donald Trump</p>
+                    <div class = "white-banner"> 
+                        <%= image_tag "rep.png", class: 'party-logo' %>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        <% end %>
 
 <div class = "republican don">
-	<%= link_to "Donald Trump", why_path(party: true) %>
+	
 
 </div>
 
 <div class = "democrat hill">
-	<%= link_to "Hillary Clinton" , why_path(party: false) %>
+	
+</div>
+
+<div class = "footer">
+    <%= link_to "I don't know yet", "https://www.isidewith.com/", target: "_blank" %>
 </div>
