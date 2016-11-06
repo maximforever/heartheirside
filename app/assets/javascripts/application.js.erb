@@ -53,7 +53,7 @@ function main(){
 
     $(".message-body").keyup(function() {
         var chars = $(this).val().length;
-        if(chars >= 200){
+        if(chars >= 200 || chars <= 30){
             $(".char-count").css("color", "red");
         } else {
             $(".char-count").css("color", "black");

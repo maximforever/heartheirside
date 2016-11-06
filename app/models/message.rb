@@ -9,6 +9,6 @@ class Message < ActiveRecord::Base
   end
 
 
-   # validates :body, length: { minimum: 50 }
+  validates :body, length: { minimum: 30 }
 
 end

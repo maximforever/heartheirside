@@ -45,6 +45,9 @@ body {
     &.alert-success{
         background: #64C83F;   
     }
+    &.alert-error{
+        background: #F7163A;   
+    }
  }
 
 
@@ -180,6 +183,7 @@ body {
 
 .char-count {
     text-align: left;
+    color: red;
 }
 
 
@@ -228,11 +232,16 @@ body {
     text-align: center; 
 }
 
-
-@media (max-width: 768) {
+@media (max-width: 720px){
     .candidate-button{
         width: 85vw;
-        height: 30vw;
+        height: 40vw;
+    }
+    .message-body{
+        font-size: 5vw;
+    }
+    .alert{
+        max-width: 80%;
     }
 
 }

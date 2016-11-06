@@ -47,15 +47,16 @@ class MessageController < ApplicationController
 				redirect_to results_path
 				flash[:success] = "Thank you for speaking up and sharing your views"
 			else
-				flash[:success] = "Something went wrong here."
-				redirect_to root_path
+				flash[:error] = "Please write at least 50 characters!"
+				render why_path
 			end
 			
 			puts "!!! post -- END: SESSION COMPLETE is: #{session[:complete]}"
 
 		else
-			redirect_to root_path
-			flash[:success] = "Something went wrong here."
+			session[:complete] == 0
+			redirect_to why_path
+			flash[:error] = "Please write at least 30 characters!"
 		end
 
 
