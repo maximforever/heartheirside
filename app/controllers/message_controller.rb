@@ -104,6 +104,17 @@ class MessageController < ApplicationController
 
 	end
 
+	def stats
+				@total = Message.count.to_f
+				@hill = Message.where(["party = ? and positive = ?", false, true]).count.to_f
+				@don = Message.where(["party = ? and positive = ?", true, true]).count.to_f
+				@pos = Message.where(["positive = ?", true]).count.to_f
+				@neg = Message.where(["positive = ?", false]).count.to_f
+
+				@don_per = (@don/(@don+@hill)*100).round(2)
+				@hill_per = (@hill/(@don+@hill)*100).round(2)
+	end
+
 
 	private
 
