@@ -40,6 +40,7 @@ class MessageController < ApplicationController
 			if session[:complete] == 0
 				puts "upping to 1"
 				session[:complete] = 1
+
 				redirect_to whynot_path(party: @message.party)
 			elsif session[:complete] == 1
 				puts "upping to 2"

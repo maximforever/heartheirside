@@ -10,14 +10,22 @@
 
 <%= @candidate %></span> because: </h1>
 
-
 <div class = "container">
     <%= form_for (@message), :html => {:class => "input-form"} do |m| %>
+
+
         <p class = "char-count">Characters: <span id = "counter">0</span>/200</p>
         <%= m.text_area :body, rows: 2, maxlength: 200, size: 200, class: "message-body" %>
-        <%= m.hidden_field :party, :value => params[:party] %>
-        <%= m.hidden_field :positive, value: true %>
-        <%= m.hidden_field :complete, value: false %>
+
+        <% if params[:party] == "true" || params[:party] == true %>
+            <%= m.hidden_field :party, :value => "false" %>
+        <% elsif params[:party] == "false" || params[:party] == false  %>
+            <%= m.hidden_field :party, :value => "true" %>
+        <% end %>
+
+
+        <%= m.hidden_field :positive, value: false %>
+        <%= m.hidden_field :complete, value: true %>
 
         <br>
 
